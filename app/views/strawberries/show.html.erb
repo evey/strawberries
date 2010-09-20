@@ -1,0 +1,12 @@
+<% title "Strawberry" %>
+
+<p>
+  <strong>Color:</strong>
+  <%= @strawberry.color %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_strawberry_path(@strawberry) %> |
+  <%= link_to "Destroy", @strawberry, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", strawberries_path %>
+</p>

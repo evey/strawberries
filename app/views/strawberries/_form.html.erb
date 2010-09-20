@@ -1,0 +1,8 @@
+<%= form_for @strawberry do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :color %><br />
+    <%= f.text_field :color %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

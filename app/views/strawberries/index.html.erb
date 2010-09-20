@@ -1,0 +1,16 @@
+<h1>There is <%= "#{Strawberry.count}" -%> strawberry</h1>
+<table>
+  <tr>
+    <th>Color</th>
+  </tr>
+  <% @strawberries.each do |strawberry| %>
+    <tr>
+      <td><%=h strawberry.color %></td>
+      <td><%= link_to "Show", strawberry %></td>
+      <td><%= link_to "Edit", edit_strawberry_path(strawberry) %></td>
+      <td><%= link_to " eat the #{strawberry.color} strawberry", strawberry, 
+:confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
